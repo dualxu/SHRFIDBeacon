@@ -1,0 +1,2 @@
+MainPackage=D:\WorkSpace\Work2018\DevSpec\iBeacon\sourcecode\SHRFIDBeacon\SHRFIDBeaconServiceTest\bin\Debug\SHRFIDBeaconServiceTest_1.0.0.0_x86_Debug.appx
+SymbolPackage=D:\WorkSpace\Work2018\DevSpec\iBeacon\sourcecode\SHRFIDBeacon\SHRFIDBeaconServiceTest\AppPackages\SHRFIDBeaconServiceTest_1.0.0.0_Debug_Test\SHRFIDBeaconServiceTest_1.0.0.0_x86_Debug.appxsym

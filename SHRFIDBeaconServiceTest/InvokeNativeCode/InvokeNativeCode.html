@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SHRFIDBeaconServiceTest</title>
+</head>
+<body style="background:#007acc">
+    <h1>Invoke native code in WebView</h1>
+    <h2>Blue region is WebView</h2>
+    <h3 id="ifName"></h3>
+    <h3 id="resultContainer"></h3>
+    <br />
+    <br />
+    <br />
+    <div>
+        <button id="btn1" width="200" onclick="GetPlusResult()">GetPlusResult</button>
+        <button id="btn2" onclick="GetVersion()">GetVersion</button>
+    </div>
+    <br />
+    <div>
+        <button id="btn4" onclick="StartSearchBeacons()">StartSearchBeacons</button>
+        <button id="btn6" onclick="OnSearchBeacons()">OnSearchBeacons</button>
+        <button id="btn5" onclick="StopSearchBeacons()">StopSearchBeacons</button>
+    </div>
+    <br />
+    <div>
+
+    </div>
+
+    <script>
+        window.onload = function () {
+            //Notice that The Native method name is GetPlusResult, but in js it's name is getPlusResult, the first letter had to to lower.
+            var a = 117;
+            var b = 140;
+            var result = SHRFIDBeaconService.getPlusResult(a, b);
+            document.getElementById("ifName").innerHTML = "getPlusResult: ";
+            document.getElementById("resultContainer").innerHTML =  a + "+" + b + "= " + result;
+        }
+
+        function GetPlusResult() {
+            var a = 123;
+            var b = 234;
+            var sum = SHRFIDBeaconService.getPlusResult(a, b);
+            document.getElementById("ifName").innerHTML = "getPlusResult: ";
+            document.getElementById("resultContainer").innerHTML =  a + "+" + b + "= " + sum;
+        }
+        function GetVersion() {
+            var version = SHRFIDBeaconService.getVersion();
+            document.getElementById("ifName").innerHTML = "getVersion: ";
+            document.getElementById("resultContainer").innerHTML =  version;
+        }
+        function StartSearchBeacons() {
+            var startb = SHRFIDBeaconService.startSearchBeacons();
+            document.getElementById("ifName").innerHTML = "startSearchBeacons: ";
+            document.getElementById("resultContainer").innerHTML = startb;
+        }
+        function StopSearchBeacons() {
+            var stopb = SHRFIDBeaconService.stopSearchBeacons();
+            document.getElementById("ifName").innerHTML = "stopSearchBeacons: ";
+            document.getElementById("resultContainer").innerHTML =  stopb;
+        }
+        function OnSearchBeacons() {
+            var searchb = SHRFIDBeaconService.onSearchBeacons();
+            document.getElementById("ifName").innerHTML = "onSearchBeacons: ";
+            document.getElementById("resultContainer").innerHTML = searchb;
+        }
+    </script>
+</body>
+</html>

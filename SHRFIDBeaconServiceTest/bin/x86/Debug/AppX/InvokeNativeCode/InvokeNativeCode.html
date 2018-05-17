@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SHRFIDBeaconServiceTest</title>
+</head>
+<body style="background:#007acc">
+    <h1>Invoke native code in WebView</h1>
+    <h2>Blue region is WebView</h2>
+    <h2 id="resultContainer"></h2>
+
+    <br />
+    <br />
+
+    <script>
+        window.onload = function () {
+            //AllowFromWebExample is first param in Code behind MainWebView.AddWebAllowedObject
+            //getPlusResult is member of second param
+            //Notice that The Native method name is GetPlusResult, but in js it's name is getPlusResult, the first letter had to to lower.
+            var a = 7;
+            var b = 6;
+            var result = SHRFIDBeaconService.getPlusResult(a, b);
+            document.getElementById("resultContainer").innerHTML = "getPlusResult: "+a+"+"+b+"= " + result;
+        }
+    </script>
+</body>
+</html>

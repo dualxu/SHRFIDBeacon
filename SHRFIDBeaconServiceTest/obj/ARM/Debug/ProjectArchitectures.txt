@@ -1,0 +1,1 @@
+D:\WorkSpace\Work2018\DevSpec\iBeacon\sourcecode\SHRFIDBeacon\SHRFIDBeaconServiceTest\SHRFIDBeaconServiceTest.csproj;arm
